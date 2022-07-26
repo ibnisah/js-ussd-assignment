@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Hassan Isah USSD</title>
+</head>
+<body>
+
+    <h1>Bank Hassan Isah</h1>
+    
+    <script>
+
+    // This code is a replica of GTbank USSD Logic
+
+    // USING IF AND ELSE IF CONDITINAL STATEMENT
+
+    
+    /*
+        var ussd = prompt(`
+        Welcome to HIBank USSD
+        Please choose either of the options below to begin:
+        1. Airtime-Self
+        2. Airtime-Others
+        3. Data
+        4. Transfer
+        
+        `);
+            if (ussd == "1") {
+                var airtimeSelf = prompt(`Please enter amount`);
+                    alert(`Your account has been succesfully recharged with ${airtimeSelf}`);
+            }
+            
+            else if (ussd == "2") {
+                var othersNumber = prompt(`Please enter 3rd party mobile number`);
+                var airtimeOthers = prompt(`Please enter amount`);
+                    prompt(`Enter your PIN or Token code to Top Up ${othersNumber} on MTN with NGN ${airtimeOthers} or 0 to cancel.`);
+            }
+
+            else if (ussd == "3") {
+                var data = prompt(`
+                Puchase Data for:
+                1. Self
+                2. 3rd Party`);
+            }
+            
+            else if (ussd == "4") {
+                var transferAmount = prompt(`Please enter amount`);
+                var recipientAccount = prompt(`Enter recipient's ACCOUNT NUMBER or SURNAME`);
+                var accountName = prompt(`
+                Please enter:
+                1. First Bank
+                2. Access
+                3. Zenith
+                4. UBA
+                5. Ecobank
+                `);
+                    
+            }
+    */
+
+    // USING A SWITCH STATEMENT
+
+    var ussd; 
+    
+    switch (ussd = prompt(`
+        Welcome to BankHI USSD
+        Please choose either of the options below to begin:
+        1. Airtime-Self
+        2. Airtime-Others
+        3. Data
+        4. Transfer
+    `)) {
+        
+        // airtime self
+        case "1":
+            var airtimeSelf = prompt("Please enter amount");
+                alert("Your reqeust is processing. Dial *737*SMARTCARDNUMBER# to pay your cable TV subscriptions. Thank you");
+            
+            break;
+        
+        // airtime others
+        case "2":
+            var othersNumber = prompt(`Please enter 3rd party mobile number`);
+            var airtimeOthers = prompt(`Please enter amount`);
+                    prompt(`Enter your PIN or Token code to Top Up ${othersNumber} on MTN with NGN ${airtimeOthers} or 0 to cancel.`);
+                    alert("Your reqeust is processing. Dial *737*SMARTCARDNUMBER# to pay your cable TV subscriptions. Thank you");
+            
+            break;
+        
+        // data purchase
+        case "3":
+            var data = prompt(`
+                Puchase Data for:
+                1. Self
+                2. 3rd Party`);
+            
+            break;
+        
+        // transfer    
+        case "4":
+            var transferAmount = prompt(`Please enter amount`);
+            var recipientAccount = prompt(`Enter recipient's ACCOUNT NUMBER or SURNAME`);
+            var bankName = prompt(`
+                Please enter:
+                1. First Bank
+                2. Access
+                3. Zenith
+                4. UBA
+                5. Ecobank
+                `);
+            
+            // nested switch
+            switch (bankName) {
+                case "1":
+                    prompt(`Enter your PIN or Token to confirm transfer of NGN ${transferAmount} to ${recipientAccount} or 0 to cancel.`);
+                    prompt(`Transfer Successful. Do you want to save as beneficiery?
+                    
+                    1. Yes
+                    2. No`);
+                    
+                    break;
+                case "2":
+                    prompt(`Enter your PIN or Token to confirm transfer of NGN ${transferAmount} to ${recipientAccount} or 0 to cancel.`);
+                    prompt(`Transfer Successful. Do you want to save as beneficiery?
+                    
+                    1. Yes
+                    2. No`);
+                    
+                    break;
+                case "3":
+                    prompt(`Enter your PIN or Token to confirm transfer of NGN ${transferAmount} to ${recipientAccount} or 0 to cancel.`);
+                    prompt(`Transfer Successful. Do you want to save as beneficiery?
+                    
+                    1. Yes
+                    2. No`);
+                    
+                    break;
+                case "4":
+                    prompt(`Enter your PIN or Token to confirm transfer of NGN ${transferAmount} to ${recipientAccount} or 0 to cancel.`);
+                    prompt(`Transfer Successful. Do you want to save as beneficiery?
+                    
+                    1. Yes
+                    2. No`);
+                    
+                    break;
+                case "5":
+                    prompt(`Enter your PIN or Token to confirm transfer of NGN ${transferAmount} to ${recipientAccount} or 0 to cancel.`);
+                    prompt(`Transfer Successful. Do you want to save as beneficiery?
+                    
+                    1. Yes
+                    2. No`);
+                    
+                    break;
+            
+                default:
+                    alert("Invalid Option");
+                    break;
+            }
+            // end of nested switch
+            
+            break;
+        
+         
+        default:
+            alert("Invalid Option");
+            break;
+    }
+
+
+
+    
+       
+        
+    </script>
+</body>
+</html>
